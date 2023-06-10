@@ -32,7 +32,9 @@ window=display.set_mode((width,height))
 window.fill(back)
 
 clock=time.Clock()
-
+ball = GameSprite('tenis_ball.png',200,200,4,50,50)
+racket1=Player('racket.png',30,200,4,50,150)
+racket2=Player('racket.png',520,200,4,50,150)
 game_over=False
 
 speed_x=3
