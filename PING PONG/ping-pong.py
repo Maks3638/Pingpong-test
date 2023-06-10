@@ -35,10 +35,21 @@ clock=time.Clock()
 
 game_over=False
 
+speed_x=3
+speed_y=3
+
 while not game_over:
     for e in event.get():
         if e.type==QUIT:
             game_over=True
+    if game_over!=True:
+        ball.rect.x+=speed_x
+        ball.rect.y+=speed_y
+        
+        
+        
+if ball.rect.y>width-50 or ball.rect.y<0:
+    speed_y*-=1
 
     display.update()
     clock.tick(40)
